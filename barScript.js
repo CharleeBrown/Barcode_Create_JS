@@ -2,11 +2,6 @@ function createCode(){
 var getUser = document.getElementById("userName").value;
 var getpass = document.getElementById("pwdMain").value;
 
-
-
-
-
-
 JsBarcode("#barcode", getUser,{
     format:"CODE128",
     lineColor:"#000", 
@@ -23,9 +18,6 @@ JsBarcode("#barcode2", getpass,{
     displayValue:false
 });
 
-	
- 
-
 //Creates a page with the  barcode displayed
 
     var dataUrl = document.getElementById('barcode').toDataURL(); //attempt to save base64 string to server using this var  
@@ -34,11 +26,7 @@ JsBarcode("#barcode2", getpass,{
     windowContent += '<html>'
     windowContent += '<head><title>Print barcode</title><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></head>';
     windowContent += '<body>'
-
-
-
-
-windowContent += '<div class="container">'
+    windowContent += '<div class="container">'
 
 	windowContent += '<div class="row">'
     windowContent += '<div class="col" style="text-align:center;">'
@@ -49,29 +37,18 @@ windowContent += '<div class="container">'
 
     windowContent += ' </div>';
 	windowContent += ' </div>';
-windowContent += ' </div>';
-
+    windowContent += ' </div>';
     windowContent += '</body>';
-
     windowContent += '</html>';
-
-    
-
     //opens the page
     var printWin = window.open('','','width= 800,height=800');
     printWin.document.open();
     printWin.document.write(windowContent);
-   
     printWin.focus();
 
     //prints and then closes the page. 
     printWin.print();
     printWin.document.close();
     printWin.close();
-
-
-
-
-
-console.log("barcode", "barcode2");
+    console.log("barcode", "barcode2");
 }
