@@ -1,3 +1,11 @@
+function clearAll( ){
+    var dataIn = document.getElementById("data");
+    dataIn.value = "";
+
+}
+
+
+
 function createCode() {
     var getData = document.getElementById("data").value;
 
