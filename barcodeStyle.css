@@ -20,3 +20,17 @@
 #data{
     margin-left:10px;
 }
+nav{
+    border-bottom: lightgray solid 5px;
+}
+nav ul{
+    list-style-type: none;
+    margin:10px;
+
+
+}
+
+ ul li a:hover{
+background-color: lightgray;
+text-decoration: none;
+}
