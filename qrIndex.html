@@ -1,0 +1,53 @@
+<HTML>
+
+<head>
+    <title>QR Code Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-10" style="margin: auto; width: 100%;">
+
+            <label>Enter<input type="text" placeholder="Current" id="current" /></label>
+            
+        </br>
+
+            <label>Enter <input type="text" placeholder="Job #" id="Jobs" /></label>
+        
+        </br>
+
+            <label>Enter B<input type="text" placeholder="Bags/Bins" id="bags" /></label>
+
+        </br>
+
+            <label>Enter Bo<input type="text" placholder="boxes" id="boxes" /></label>
+        
+        </br>
+        
+            <input type="submit" onclick="makeCode()" />
+        </div>
+
+    </div>
+</br>
+<div class="row">
+    <div id="qrcode"></div>
+</div>
+    
+        
+
+
+
+   
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.js"></script>
+
+
+<script type="text/javascript" src="main.js">
+
+
+</script>
+
+</HTML>
