@@ -1,3 +1,13 @@
+@media screen{
+    body{
+    font-size: 50px;
+}
+div{
+    font-size: 19px;
+}
+    
+}
+
 #mainCode{
     padding-top:30px;
 }
