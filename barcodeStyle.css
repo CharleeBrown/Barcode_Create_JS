@@ -44,3 +44,11 @@ nav ul{
 background-color: lightgray;
 text-decoration: none;
 }
+#labelRow{
+    
+    text-align: right;
+}
+#hovers{
+    display:block;
+    margin-left: 50px;
+}

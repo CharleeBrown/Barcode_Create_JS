@@ -1,44 +1,80 @@
-function clearAll( ){
-let inputs = document.getElementsByTagName("input");
-   for(var i=0; i<inputs.length; i++ ){
-       inputs[i].value = "";
-   }
+function clearAll() {
+    let inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+  
+}
 
+function clearIt() {
+    let inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+    var firstInput = document.getElementById("data");
+    firstInput.focus();
+}
+
+function notSecret(inputs){
+    inputs.setAttribute("type", "text");
+}
+function makeSecret(inputs){
+    inputs.setAttribute("type", "password");
 }
 
 
 
 function createCode() {
-    var getData = document.getElementById("data").value;
+    var firstData = document.getElementById("data").value;
     var secondData = document.getElementById("data2").value;
+    if (firstData == ' ' && secondData != '') {
+        JsBarcode("#barcode2", secondData, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 35,
+            displayValue: true
+        });
 
+    } else if (secondData == '' && firstData != '') {
+        // Using the JSBarcode library https://github.com/lindell/JsBarcode. 
+        JsBarcode("#barcode", firstData, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 35,
+            displayValue: true
+        });
+    } else {
+        // Using the JSBarcode library https://github.com/lindell/JsBarcode. 
+        JsBarcode("#barcode", firstData, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 35,
+            displayValue: true
+        });
+        JsBarcode("#barcode2", secondData, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 2,
+            height: 35,
+            displayValue: true
+        });
 
-    // Using the JSBarcode library https://github.com/lindell/JsBarcode. 
-    JsBarcode("#barcode", getData, {
-        format: "CODE128",
-        lineColor: "#000",
-        width: 2,
-        height: 35,
-        displayValue: true
-    });
-    JsBarcode("#barcode2", secondData, {
-        format: "CODE128",
-        lineColor: "#000",
-        width: 2,
-        height: 35,
-        displayValue: true
-    });
+    }
+
 
 
 }
 
-function printCode(){
+function printCode() {
 
     //Creates a page with the  barcode displayed
 
     var dataUrl = document.getElementById('barcode').toDataURL(); //attempt to save base64 string to server using this var  
     var dataUrl2 = document.getElementById('barcode2').toDataURL(); //attempt to save base64 string to server using this var  
-   
+
     var windowContent = '<!DOCTYPE html>';
 
     windowContent += '<html>'

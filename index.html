@@ -28,13 +28,19 @@
 
 
 	<div class="container">
+	
 		<div class="row">
+			
 			<div class="col" id="barcodeSection">
 				
-				<label>Enter Data<input type="text" id="data" /></label>
+				<label>Enter Data<input type="text" id="data" maxlength="20" /></label>
 			</div>
+			
 			<div class="col" id="barcodeSection">
-				<label>Enter More Data<input type="text" id="data2" /></label>
+				
+				<label>Enter More Data
+					
+				<input type="text" id="data2" maxlength="20" onmouseover="notSecret(this)" onmouseout="makeSecret(this)" /></label><label id="hovers">Hover to view text</label>
 			</div>
 		</div>
 
@@ -42,6 +48,10 @@
 		<div class="row">
 			<div class="col" id="barcodeSection2">
 				<button type="submit" onclick="createCode()">Create Barcode</button>
+			</div>
+				<div class="col" id="barcodeSection2">
+				
+				<button type="submit" onclick="clearIt()"> Clear</button>
 			</div>
 			<div class="col" id="barcodeSection2">
 				<button type="submit" onclick="printCode()">Print Barcode</button>
@@ -61,6 +71,7 @@
 		<div class="col">
 			<canvas id="barcode2"></canvas>
 		</div>
+	
 	</div>
 
 
