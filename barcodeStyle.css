@@ -1,54 +1,61 @@
-@media screen{
-    body{
-    font-size: 20px;
-}
-div{
-    font-size: 19px;
-}
-    
+@media screen {
+    body {
+        font-size: 20px;
+    }
+
+    div {
+        font-size: 19px;
+    }
+
 }
 
-#mainCode{
-    padding-top:30px;
+#mainCode {
+    padding-top: 30px;
 }
-#barcodeSection{
+
+#barcodeSection {
     text-align: center;
 }
 
-#barcodeSection2{
+#barcodeSection2 {
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-#headerSection{
+#headerSection {
     text-align: center;
-    margin-top:30px; 
+    margin-top: 30px;
     margin-bottom: 30px;
     border: 3px solid grey;
-    
+
 }
-#data{
-    margin-left:10px;
+
+#data {
+    margin-left: 10px;
 }
-nav{
+
+nav {
     border-bottom: lightgray solid 5px;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
-    margin:10px;
+    margin: 10px;
 
 
 }
 
- ul li a:hover{
-background-color: lightgray;
-text-decoration: none;
+ul li a:hover {
+    background-color: lightgray;
+    text-decoration: none;
 }
-#labelRow{
-    
+
+#labelRow {
+
     text-align: right;
 }
-#hovers{
-    display:block;
+
+#hovers {
+    display: block;
     margin-left: 50px;
 }
