@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  head
+  link(rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  link(rel='stylesheet' href='barcodeStyle.css')
+  meta(charset='utf-8')
+  title
+    | Barcode Creator
+  nav.navbar.navbar-expand-lg.navbar-light
+    ul
+      li
+        a(href='#')  Home
+  #headerSection.container
+    h1
+      | Barcode Creator
+  .container
+    .row
+      #barcodeSection.col
+        label
+          | Enter Data
+          input#data(type='text' maxlength='20')
+      #barcodeSection.col
+        label
+          | Enter More Data
+          input#data2(type='text' maxlength='20' onmouseover='notSecret(this)' onmouseout='makeSecret(this)')
+        label#hovers Hover to view text
+    .row
+      #barcodeSection2.col
+        button(type='submit' onclick='createCode()') Create Barcode
+      #barcodeSection2.col
+        button(type='submit' onclick='clearIt()')  Clear
+      #barcodeSection2.col
+        button(type='submit' onclick='printCode()') Print Barcode
+  hr
+  br
+  #barcodeSection.row
+    .col
+      canvas#barcode
+    .col
+      canvas#barcode2
+  .footer(style='text-align:center;padding-top:40px; ')
+    span(style='color:lightgray')
+      | Cole.Co. 
+      p#cYear
+  script(src='https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js')
+  script(src='/javascripts/barScript.js')
+
