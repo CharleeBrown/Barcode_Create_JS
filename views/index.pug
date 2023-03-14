@@ -1,12 +1,7 @@
 extends layout
 
 block content
-  head
-  link(rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
-  link(rel='stylesheet' href='barcodeStyle.css')
-  meta(charset='utf-8')
-  title
-    | Barcode Creator
+
   nav.navbar.navbar-expand-lg.navbar-light
     ul
       li
@@ -44,5 +39,5 @@ block content
       | Cole.Co. 
       p#cYear
   script(src='https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js')
-  script(src='/javascripts/barScript.js')
+  script(src='barScript.js')
 
