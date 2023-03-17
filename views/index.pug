@@ -1,14 +1,6 @@
 extends layout
 
 block content
-
-  nav.navbar.navbar-expand-lg.navbar-light
-    ul
-      li
-        a(href='#')  Home
-  #headerSection.container
-    h1
-      | Barcode Creator
   .container
     .row
       #barcodeSection.col
@@ -39,5 +31,5 @@ block content
       | Cole.Co. 
       p#cYear
   script(src='https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js')
-  script(src='barScript.js')
+  script(src='/javascripts/barScript.js')
 
